@@ -2,26 +2,20 @@ package application;
 
 import java.security.SecureRandom;
 
+import enums.Status;
+
 // Capitulo 6.10 - Jogo de Azar "Craps"
 // Versão 1.0
 public class Program {
 	
 		// cria um gerador seguro de números aleatórios para uso no método rollDice();
 		private static final SecureRandom randomNumbers = new SecureRandom();
-		
-		// tipo enum com constantes que representam o estado do jogo
-		private enum Status {
-			CONTINUE,
-			WON, 
-			LOST;
-		};
-		
+
 		// contanstes que representam lançamentos comuns dos dados
 		private static final int SNAKE_EYES = 2;
 		private static final int TREY = 3;
 		private static final int SEVEN = 7;
 		private static final int YO_LEVEN = 11;
-		private static final int BOX_CARS = 12;
 
 	// joga uma partida de craps
 	public static void main(String[] args) {
